@@ -65,7 +65,7 @@ export const Contact = () => {
                   
                     <Col size={12} className="px-1">
                       <textarea rows="6" name="email"  placeholder="Message" ></textarea>
-                      <button   type="submit">Send</button>
+                      <button   type="submit"><span>Send</span></button>
                     </Col>
                     {status && <p style={{ marginTop: "10px", color: "green" }}>{status}</p>}
                   </Row>
