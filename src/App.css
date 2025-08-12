@@ -546,6 +546,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   color:white;
 }
+.contact form button span {
+  position: relative;
+  z-index: 2; /* keeps text above the background */
+}
+
 
 /************ Footer Css ************/
 .footer {
