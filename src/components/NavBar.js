@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
 
 export const NavBar = () => {
-
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,7 +21,6 @@ export const NavBar = () => {
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
-
         <Navbar.Brand href="/">
           <h1 className="imge">JOSELIN</h1>
         </Navbar.Brand>
@@ -34,10 +31,11 @@ export const NavBar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-
             <Nav.Link
               href="#home"
-              className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
+              className={
+                activeLink === "home" ? "active navbar-link" : "navbar-link"
+              }
               onClick={() => onUpdateActiveLink("home")}
             >
               Home
@@ -45,7 +43,9 @@ export const NavBar = () => {
 
             <Nav.Link
               href="#skills"
-              className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
+              className={
+                activeLink === "skills" ? "active navbar-link" : "navbar-link"
+              }
               onClick={() => onUpdateActiveLink("skills")}
             >
               Skills
@@ -53,39 +53,48 @@ export const NavBar = () => {
 
             <Nav.Link
               href="#projects"
-              className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
+              className={
+                activeLink === "projects"
+                  ? "active navbar-link"
+                  : "navbar-link"
+              }
               onClick={() => onUpdateActiveLink("projects")}
             >
               Projects
             </Nav.Link>
-
           </Nav>
 
           <span className="navbar-text">
             <div className="social-icon">
-
-              <a href="https://www.linkedin.com/in/joselin-m-k-031b11379/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/joselin-m-k-031b11379/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
                 <i className="bi bi-linkedin text-white"></i>
               </a>
 
-              <a href="https://github.com/joselinmk" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/joselinmk"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
                 <i className="bi bi-github text-white"></i>
               </a>
 
-              {/* FIXED HERE 👇 */}
-              <a href="/" >
+              <a href="/" aria-label="Facebook">
                 <i className="bi bi-facebook text-white"></i>
               </a>
-
             </div>
 
-            <HashLink to="#connect">
+            <a href="#connect">
               <button className="vvd">
-                <span>Let’s Connect</span>
+                <span>Let's Connect</span>
               </button>
-            </HashLink>
+            </a>
           </span>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>
