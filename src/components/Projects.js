@@ -11,19 +11,22 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "E-commerce Website",
+      description: "A responsive shopping website for browsing products and exploring online deals.",
       imgUrl: projImg1,
+      projectUrl: "https://e-commerce-project-vert-eight.vercel.app/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Car Rental Website",
+      description: "A premium car rental landing page with a bold booking-focused design.",
       imgUrl: projImg2,
+      projectUrl: "https://car-sigma-six.vercel.app/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Movie Hunt",
+      description: "A movie discovery app for exploring popular films with a clean modern UI.",
       imgUrl: projImg3,
+      projectUrl: "https://move-hurt.vercel.app/",
     },
     {
       title: "Business Startup",
@@ -51,7 +54,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Here are some of my recent projects built with modern web technologies. Each project focuses on responsive design, clean user experience, and practical real-world functionality.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -68,7 +71,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projects.slice(0, 3).map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -79,11 +82,11 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <p>More projects are coming soon as I continue building and improving my portfolio.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>I am currently exploring more React projects, UI designs, and full-stack application ideas.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
