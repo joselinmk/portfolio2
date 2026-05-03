@@ -62,9 +62,11 @@ export const Banner = () => {
                     I build responsive, user-friendly web applications using
                     modern technologies.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
+                  <a href="/joselin_mern.pdf" download="joselin_mern.pdf">
+                    <button type="button">
+                      Download Resume <ArrowRightCircle size={25} />
+                    </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
